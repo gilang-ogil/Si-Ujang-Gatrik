@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Jenis Instalasi -->
+    <string-array name="jenis_instalasi_options">
+        <item>Rumah Tangga</item>
+        <item>Komersial / Bisnis</item>
+        <item>Industri</item>
+        <item>Sosial</item>
+        <item>Pemerintahan</item>
+    </string-array>
+
+    <!-- Tegangan Sistem -->
+    <string-array name="tegangan_sistem_options">
+        <item>220 Volt (1 Phase)</item>
+        <item>380 Volt (3 Phase)</item>
+        <item>6.000 Volt (Menengah)</item>
+        <item>20.000 Volt (Menengah)</item>
+        <item>70.000 Volt (Tinggi)</item>
+        <item>150.000 Volt (Tinggi)</item>
+    </string-array>
+
+    <!-- Jenis Kabel Utama -->
+    <string-array name="jenis_kabel_options">
+        <item>NYM 3 x 1.5 mm²</item>
+        <item>NYM 3 x 2.5 mm²</item>
+        <item>NYM 3 x 4 mm²</item>
+        <item>NYY 4 x 2.5 mm²</item>
+        <item>NYY 4 x 4 mm²</item>
+        <item>NYY 4 x 6 mm²</item>
+        <item>NYFGbY 4 x 10 mm²</item>
+        <item>NYFGbY 4 x 16 mm²</item>
+    </string-array>
+
+    <!-- Jumlah Titik Lampu -->
+    <string-array name="jumlah_titik_lampu_options">
+        <item>1 - 5 Titik</item>
+        <item>6 Titik</item>
+        <item>7 Titik</item>
+        <item>8 Titik</item>
+        <item>9 Titik</item>
+        <item>10 Titik</item>
+        <item>11 Titik</item>
+        <item>12 Titik</item>
+        <item>13 Titik</item>
+        <item>14 Titik</item>
+        <item>15 Titik</item>
+        <item>16 - 20 Titik</item>
+        <item>21 - 30 Titik</item>
+        <item>Lebih dari 30 Titik</item>
+    </string-array>
+
+    <!-- Jumlah Stop Kontak -->
+    <string-array name="jumlah_stop_kontak_options">
+        <item>1 Titik</item>
+        <item>2 Titik</item>
+        <item>3 Titik</item>
+        <item>4 Titik</item>
+        <item>5 Titik</item>
+        <item>6 Titik</item>
+        <item>7 Titik</item>
+        <item>8 Titik</item>
+        <item>9 Titik</item>
+        <item>10 Titik</item>
+        <item>11 - 15 Titik</item>
+        <item>16 - 20 Titik</item>
+        <item>Lebih dari 20 Titik</item>
+    </string-array>
+
+    <!-- Sistem Pembumian (Grounding) -->
+    <string-array name="grounding_options">
+        <item>Tersedia (Copper Rod)</item>
+        <item>Tersedia (Copper Plate)</item>
+        <item>Tersedia (Pipa Galvanis)</item>
+        <item>Tidak Tersedia</item>
+    </string-array>
+
+    <!-- Proteksi Kebocoran (ELCB) -->
+    <string-array name="elcb_options">
+        <item>Terpasang</item>
+        <item>Tidak Terpasang</item>
+        <item>Dalam Perencanaan</item>
+    </string-array>
+
+    <string-array name="status_slo_admin">
+        <item>Menunggu Verifikasi</item>
+        <item>Verifikasi Dokumen</item>
+        <item>Pemeriksaan Lapangan</item>
+        <item>Menunggu Penerbitan SLO</item>
+        <item>Selesai</item>
+        <item>Ditolak</item>
+    </string-array>
+
+</resources>

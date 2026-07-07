@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#263143"
+        app:title="Admin Dashboard"
+        app:titleTextColor="#FFFFFF"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Header sambutan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#263143"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/tvSambutan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selamat datang, Administrator"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Panel Manajemen Permohonan"
+                    android:textColor="#BBDEFB"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Kartu Statistik -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp">
+
+                <!-- Total -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#1565C0">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+                        <TextView
+                            android:id="@+id/tvStatTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textColor="#BBDEFB"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Menunggu -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#F57F17">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+                        <TextView
+                            android:id="@+id/tvStatMenunggu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Menunggu"
+                            android:textColor="#FFF9C4"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingBottom="8dp">
+
+                <!-- Disetujui -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#2E7D32">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+                        <TextView
+                            android:id="@+id/tvStatDisetujui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disetujui"
+                            android:textColor="#C8E6C9"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Ditolak -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#C62828">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+                        <TextView
+                            android:id="@+id/tvStatDitolak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ditolak"
+                            android:textColor="#FFCDD2"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Filter tabs -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layoutFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFilterSemua"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Semua"
+                        android:textSize="12sp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFilterMenunggu"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Menunggu"
+                        android:textSize="12sp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFilterPemeriksaan"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Pemeriksaan"
+                        android:textSize="12sp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFilterDisetujui"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Disetujui"
+                        android:textSize="12sp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFilterDitolak"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Ditolak"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- RecyclerView permohonan -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPermohonan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <!-- Empty state -->
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tidak ada permohonan"
+                android:textColor="#9E9E9E"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Tombol Logout di bawah -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Logout"/>
+
+</LinearLayout>

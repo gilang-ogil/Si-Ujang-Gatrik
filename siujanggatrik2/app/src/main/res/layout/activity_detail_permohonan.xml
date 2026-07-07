@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="Detail Permohonan" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Permohonan"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/tvNomor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NIDI-202600001"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jenis Instalasi"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/tvJenis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rumah Tinggal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Pengajuan"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/tvTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 Juli 2026"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selesai"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKembali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Kembali"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blue"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

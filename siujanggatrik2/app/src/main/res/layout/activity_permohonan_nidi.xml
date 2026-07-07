@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Permohonan NIDI"
+        app:titleCentered="true"
+        android:textColor="@color/black"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- DATA DIRI -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="1  Data Diri"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="@color/card">
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Lengkap">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNamaLengkap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="12dp"
+                        android:hint="NIK"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNIK"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="12dp"
+                        android:hint="Alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAlamatKTP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="3"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint=" No WhatsApp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etWhatsApp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Space
+                            android:layout_width="8dp"
+                            android:layout_height="1dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="Email">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- DATA INSTALASI -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="2  Data Instalasi"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="@color/card">
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Jenis Instalasi">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownJenisInstalasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Kapasitas Daya">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etKapasitasDaya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Alamat Lokasi">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAlamatInstalasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- DATA TEKNIS -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="3  Data Teknis"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/card">
+
+                <TableLayout
+                    android:padding="16dp"
+                    android:stretchColumns="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownTeganganSistem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tegangan Sistem"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownJenisKabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Jenis Kabel"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownJumlahLampu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Jumlah Lampu"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdownJumlahStopKontak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Jumlah Stop Kontak"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- BIAYA -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="4  Ringkasan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#2F4964"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="Biaya Pemeriksaan        Rp150.000"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="8dp"
+                        android:text="Administrasi                 Rp25.000"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#66FFFFFF"
+                        android:layout_marginVertical="12dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:text="Total Rp175.000"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <CheckBox
+                android:id="@+id/checkboxPernyataan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Saya menyatakan seluruh data yang saya masukkan adalah benar."
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKirimPermohonan"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:text="Kirim Permohonan"
+                android:backgroundTint="@color/blue"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

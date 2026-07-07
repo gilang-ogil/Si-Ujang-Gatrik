@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    android:backgroundTint="@color/card">
+
+    <LinearLayout
+        android:backgroundTint="@color/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/tvNomor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIDI-2026001"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/tvJenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instalasi Rumah"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/tvTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06 Juli 2026"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemeriksaan"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Lihat Detail"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

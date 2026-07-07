@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SI UJANG GATRIK"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#1E3348"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Akun"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:textColor="#1E3348"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lengkapi data Anda untuk mulai menggunakan layanan kelistrikan resmi."
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Card Form -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/card">
+
+            <LinearLayout
+                android:backgroundTint="@color/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Nama -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:textStyle="bold"
+                    android:textColor="#1E3348"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contoh: Budi Santoso"
+                        android:padding="14dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textStyle="bold"
+                    android:textColor="#1E3348"
+                    android:layout_marginTop="12dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="alamat@email.com"
+                        android:padding="14dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- WhatsApp -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor WhatsApp"
+                    android:textStyle="bold"
+                    android:textColor="#1E3348"
+                    android:layout_marginTop="12dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWhatsapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="081234567XXX"
+                        android:inputType="phone"
+                        android:padding="14dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kata Sandi"
+                    android:textStyle="bold"
+                    android:textColor="#1E3348"
+                    android:layout_marginTop="12dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Min. 8 karakter"
+                        android:inputType="textPassword"
+                        android:padding="14dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Checkbox -->
+                <CheckBox
+                    android:id="@+id/cbAgreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saya menyetujui Syarat dan Ketentuan serta Kebijakan Privasi yang berlaku."
+                    android:textColor="#555555"
+                    android:layout_marginTop="12dp"/>
+
+                <!-- Button -->
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Daftar Sekarang"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#16344C"
+                    android:layout_marginTop="16dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Login -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sudah punya akun? "
+                android:textColor="#555555"/>
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk"
+                android:textStyle="bold"
+                android:textColor="#1E3348"/>
+        </LinearLayout>
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GATRIK AUTHORITY SYSTEM • 2024"
+            android:textSize="12sp"
+            android:textColor="#B0B0B0"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

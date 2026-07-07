@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    tools:context=".HasilPembayaranActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:title="Pembayaran"
+        app:titleCentered="true"
+        app:navigationIcon="@drawable/ic_arrow_back"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_circle_light_gray">
+
+                <ImageView
+                    android:id="@+id/ivSuccess"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/checkbox_on_background"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:text="Pembayaran Berhasil!"
+                android:textColor="#17324D"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Pembayaran Anda telah diverifikasi dan permohonan sedang diproses."
+                android:textColor="#666666"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Detail Transaksi"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BERHASIL"
+                            app:chipBackgroundColor="#D7E9FF"
+                            android:textColor="#1A4C85"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#EEEEEE"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ID Permohonan"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/tvIdPermohonan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="REQ-20240502-091"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Metode Pembayaran"/>
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/tvMetode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BCA Virtual Account"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#EEEEEE"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total Pembayaran"/>
+
+                        <TextView
+                            android:id="@+id/tvTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp175.000"
+                            android:textColor="@color/black"
+                            android:textSize="28sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Langkah Selanjutnya"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTimTeknis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="3dp"
+                android:backgroundTint="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <FrameLayout
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:background="@drawable/bg_circle_yellow">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_profile" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/tvStep1Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Penugasan Tim Teknis"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvStep1Desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Permohonan akan diteruskan kepada tim teknis untuk dilakukan penjadwalan pemeriksaan instalasi listrik."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardJadwal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="3dp"
+                android:backgroundTint="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <FrameLayout
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:background="@drawable/bg_circle_light_gray">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_history" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/tvStep2Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jadwal Pemeriksaan"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvStep2Desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Anda akan menerima notifikasi setelah jadwal pemeriksaan berhasil ditentukan oleh petugas."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCekStatus"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:text="Cek Status Permohonan"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="14dp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKembali"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="30dp"
+                android:text="Kembali ke Beranda"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="14dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

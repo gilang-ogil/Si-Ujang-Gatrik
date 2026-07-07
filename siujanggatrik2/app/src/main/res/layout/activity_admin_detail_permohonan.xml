@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:title="Detail Permohonan"
+        app:titleTextColor="#FFFFFF"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Kartu status -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:backgroundTint="@color/card">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDetailId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NIDI-202600001"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#212121"/>
+
+                        <TextView
+                            android:id="@+id/tvDetailTanggal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="12 Juli 2026"
+                            android:textSize="12sp"
+                            android:textColor="#9E9E9E"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvDetailStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menunggu"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#F57F17"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Kartu data pemohon -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:backgroundTint="@color/card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Pemohon"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1565C0"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Nama -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Lengkap"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"/>
+                    <TextView
+                        android:id="@+id/tvDetailNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:layout_marginBottom="10dp"/>
+
+                    <!-- NIK -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NIK"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"/>
+                    <TextView
+                        android:id="@+id/tvDetailNik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:layout_marginBottom="10dp"/>
+
+                    <!-- WhatsApp -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WhatsApp"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"/>
+                    <TextView
+                        android:id="@+id/tvDetailWa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:layout_marginBottom="10dp"/>
+
+                    <!-- Email -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"/>
+                    <TextView
+                        android:id="@+id/tvDetailEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="14sp"
+                        android:textColor="#212121"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Kartu data instalasi -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/card"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:backgroundTint="@color/card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Instalasi"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1565C0"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Jenis -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jenis Instalasi"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"/>
+                    <TextView
+                        android:id="@+id/tvDetailJenis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:layout_marginBottom="10dp"/>
+
+                    <!-- Kapasitas -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kapasitas Daya"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"/>
+                    <TextView
+                        android:id="@+id/tvDetailDaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:layout_marginBottom="10dp"/>
+
+                    <!-- Alamat -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat Instalasi"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"/>
+                    <TextView
+                        android:id="@+id/tvDetailAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textSize="14sp"
+                        android:textColor="#212121"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Catatan admin (untuk penolakan) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCatatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Catatan Penolakan (opsional)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#C62828"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Alasan penolakan...">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCatatanTolak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minLines="3"
+                            android:gravity="top"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Tombol aksi di bawah -->
+    <LinearLayout
+        android:id="@+id/layoutAksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTolak"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Tolak"
+            app:strokeColor="#C62828"
+            android:textColor="#C62828"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSetujui"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Setujui"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPemeriksaan"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Pemeriksaan"/>
+
+    </LinearLayout>
+
+    <!-- Panel setelah sudah ada keputusan -->
+    <LinearLayout
+        android:id="@+id/layoutSudahDiproses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvSudahDiproses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Permohonan ini sudah diproses"
+            android:textColor="#9E9E9E"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResetStatus"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset ke Menunggu"/>
+
+    </LinearLayout>
+
+</LinearLayout>

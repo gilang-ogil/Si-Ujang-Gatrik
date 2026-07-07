@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    tools:context=".PermohonanSloActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        app:titleTextColor="@color/black"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:title="Permohonan SLO"
+        app:titleCentered="true"
+        app:navigationIcon="@drawable/ic_arrow_back"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bg_circle_primary"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Data Instalasi"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kategori Bangunan"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardRumah"
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            app:strokeWidth="2dp"
+                            app:strokeColor="#1E3A5F"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="@color/card">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_home"/>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tvRumah"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Residensial"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardIndustri"
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="@color/card">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_factory"/>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Industri"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardBisnis"
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="12dp"
+                            app:cardBackgroundColor="@color/card">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_business"/>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Bisnis"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:hint="Kapasitas Daya (VA)">
+
+                        <AutoCompleteTextView
+                            android:textColor="@color/black"
+                            android:id="@+id/dropdownDaya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Alamat Lengkap Instalasi">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAlamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:gravity="top"
+                            android:paddingTop="12dp"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/black"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bg_circle_primary"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Data Teknis"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#EEEEEE"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Tegangan">
+
+                            <AutoCompleteTextView
+                                android:textColor="@color/black"
+                                android:id="@+id/dropdownTegangan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Space
+                            android:layout_width="12dp"
+                            android:layout_height="1dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Frekuensi">
+
+                            <AutoCompleteTextView
+                                android:textColor="@color/black"
+                                android:id="@+id/dropdownFrekuensi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Jumlah Titik Lampu"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:strokeColor="#DDDDDD"
+                        app:strokeWidth="1dp"
+                        app:cardBackgroundColor="@color/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="16dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMinusLampu"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="-"
+                                android:textSize="22sp"/>
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:id="@+id/tvJumlahLampu"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="8"
+                                android:textSize="22sp"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnPlusLampu"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="+"
+                                android:textSize="22sp"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Sistem Pembumian"
+                        android:textStyle="bold"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGrounding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp">
+
+                        <RadioButton
+                            android:id="@+id/rbTNC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TN-C (Protective Earth and Neutral)"
+                            android:padding="12dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTNS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TN-S (Separate Protective Earth)"
+                            android:padding="12dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TT (Direct Earth Connection)"
+                            android:padding="12dp"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bg_circle_primary"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Dokumen Pendukung"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Denah Lokasi"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardDenah"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:strokeColor="#D0D5DD"
+                        app:strokeWidth="1dp"
+                        app:cardBackgroundColor="@color/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_upload"/>
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="Upload Foto / PDF"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Maksimal 5 MB"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnUploadDenah"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="Pilih File"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/blue"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Single Line Diagram"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardSLD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:strokeColor="#00C853"
+                        app:strokeWidth="1dp"
+                        app:cardBackgroundColor="@color/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnUploadSLD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pilih File"
+                                    android:textColor="@color/white"
+                                    android:backgroundTint="@color/blue"/>
+
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnHapusSLD"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_delete"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Sertifikat NIDI"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardNidi"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:strokeColor="#D0D5DD"
+                        app:strokeWidth="1dp"
+                        app:cardBackgroundColor="@color/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_camera"/>
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="Ambil Foto Sertifikat"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnFotoNidi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="Buka Kamera"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/blue"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bg_circle_primary"
+                            android:gravity="center"
+                            android:text="4"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Ringkasan dan Konfirmasi"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#EEEEEE"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRingkasan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#F7F9FF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Kategori"/>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tvKategoriSummary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Residensial"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Daya"/>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tvDayaSummary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1300 VA"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Jumlah Titik Lampu"/>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tvLampuSummary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8 Titik"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp">
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Sistem Bumi"/>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:id="@+id/tvGroundingSummary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TN-C"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <CheckBox
+                        android:id="@+id/checkPersetujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Saya menyatakan bahwa seluruh data dan dokumen yang diunggah adalah benar serta dapat dipertanggungjawabkan sesuai ketentuan yang berlaku."/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKirimPermohonan"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="Kirim Permohonan"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="14dp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:text="Estimasi verifikasi 1–3 hari kerja"
+                android:textColor="#777777"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

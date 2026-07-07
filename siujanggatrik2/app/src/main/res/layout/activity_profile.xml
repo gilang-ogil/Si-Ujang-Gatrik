@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:textColor="@color/black"
+        app:title="Profil"
+        app:navigationIcon="@drawable/ic_arrow_back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@android:drawable/sym_def_app_icon"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tvNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Iqbal Hidayatur"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iqbal@email.com"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="14dp"
+                android:backgroundTint="@color/card">
+
+                <LinearLayout
+                    android:backgroundTint="@color/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/menuDataDiri"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Data Diri"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/menuHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Riwayat Permohonan"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/menuNotifikasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Notifikasi"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE"/>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/menuTentang"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:text="Tentang Aplikasi"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Keluar"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blue"/>
+
+            <TextView
+                android:id="@+id/tvVersi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="SI UJANG GATRIK v1.0.0"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/bottomNav"
+            layout="@layout/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
