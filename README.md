@@ -56,7 +56,7 @@ Data yang disimpan meliputi:
 Email
 
 ```
-admin@gatrik.go.id
+admin@gmail.com
 ```
 
 Password
