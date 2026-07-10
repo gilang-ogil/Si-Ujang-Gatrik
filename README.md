@@ -134,3 +134,16 @@ Dikembangkan sebagai proyek aplikasi pelayanan sertifikasi instalasi listrik ber
 ## Lisensi
 
 Proyek ini dibuat untuk kebutuhan pembelajaran dan pengembangan akademik.
+
+## VIDIO
+https://drive.google.com/file/d/1FlvOGp-Y40mebWKyjMlGuo7cLMHj2bRe/view?usp=sharing
+
+## LAPORAN OOAD
+https://drive.google.com/file/d/11Lwx4Jn8nPeVc-5YSFMkHjPbXsm1KCMw/view?usp=sharing
+
+## UI DESIGN
+https://www.figma.com/design/Lh53yV2G17mNhfFio7r3Yb/Untitled?node-id=0-1&t=3NICru8zRgYf69NC-1
+
+## PEMBUAT
+Gilang hudatama ramadhan - 24552011246
+dan beberapa kawan yang membantu 
